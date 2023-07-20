@@ -1,4 +1,4 @@
-require 'legacy_photo_filename_format'
+require './legacy_photo_filename_format'
 require 'date'
 
 class PhotoFilenameDataParser

@@ -1,9 +1,9 @@
-require 'photo_filename_data_parser'
-require 'legacy_format_sorter'
-require 'new_photo_filename_builder'
+require './photo_filename_data_parser'
+require './legacy_format_sorter'
+require './new_photo_filename_builder'
 
 begin
-  photoFilenameParser = PhotoFilenameDataParser.new("app/sample-photo-data.txt")
+  photoFilenameParser = PhotoFilenameDataParser.new("./sample-photo-data.txt")
 rescue ArgumentError => e
   puts "Photo Data Filepath Must Be Defined! #{e}"
   exit
