@@ -20,7 +20,12 @@ an array of LegacyPhotoFilenameFormat objects representing the data.
       photoArray ||= []
 
       File.open(@photoDataFilePath).each_line do |line|
-        legacyFormat = parseLine(line)
+        if(line == "\n")
+          next
+        else
+          legacyFormat = parseLine(line)
+        end
+
         photoArray << legacyFormat
       end
 

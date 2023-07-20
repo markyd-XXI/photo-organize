@@ -8,7 +8,7 @@ of the new photo filename format
     stringOutput = ""
     parsedLegacyPhotoFilenameArray.each do |p|
       order = ""
-      numLen = Math.log(sortedLegacyPhotoFilenameArray[p.cityName].length()).to_i
+      numLen = sortedLegacyPhotoFilenameArray[p.cityName].length().digits.length
       sortedLegacyPhotoFilenameArray[p.cityName].each_with_index do |s, i|
         if s == p
           order = i + 1
